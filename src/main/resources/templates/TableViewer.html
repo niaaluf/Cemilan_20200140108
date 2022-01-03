@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Data Belanja</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <h1>Struk Belanja</h1>
+        <hr>
+            <table border="1">
+        <thead>
+            <tr>
+                <td>Nama Barang</td>
+                <td>Harga Barang</td><!-- comment -->
+                <td>Jumlah Item</td>
+                <td>Total Harga</td><!-- comment -->
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td th:text="${Nama}"></td>
+                <td th:text="${Harga}"></td>
+                <td th:text="${Barang}"></td>
+                <td th:text="${Total}"></td>
+            </tr>
+            
+            <tr>
+                <td colspan="4" align="center"> 
+                </td>
+            </tr>
+            
+            <tr>
+                <td>Diskon</td>
+                <td colspan="3" th:text="${TotalDiskon}"></td>
+            </tr>
+            
+            <tr>
+                <td>Harga Setelah Proses Diskon</td><!-- comment -->
+                <td colspan="3" th:text="${Diskon}"></td>
+            </tr>
+            
+            <tr>
+                <td>Total Biaya</td>
+                <td colspan="3" th:text="${Bayar}"></td>
+            </tr>
+            
+            <tr>
+                <td>Kembalian</td>
+                <td colspan="3" th:text="${Kembalian}"></td>
+            </tr>
+        </tbody>
+        
+        </table>
+    </body>
+</html>
